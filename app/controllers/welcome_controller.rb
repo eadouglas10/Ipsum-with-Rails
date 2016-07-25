@@ -1,9 +1,14 @@
 class WelcomeController < ApplicationController
   def index
-    render text: "<h1> Let's build a rails app!! </h1>"
+    render :index
   end
 
   def show
-    render text: "<h1> Hey #{params["name"]} </h1>"
+    render :greeting
+  end
+
+  def ipsum
+      lorem = params["lorem"]
+      render lorem
   end
 end
